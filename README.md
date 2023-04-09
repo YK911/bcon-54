@@ -1,2 +1,1 @@
-# bcon-54
-Theoretical and practical classes (module HTML &amp; CSS)
+# Bootcamp online 54
