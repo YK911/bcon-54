@@ -1,0 +1,59 @@
+body {
+  padding-top: 100px;
+}
+/* reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+/* reset end */
+
+.flex-container {
+  width: 800px;
+  min-height: 600px;
+  padding: 20px;
+  margin: 0 auto;
+
+  background-color: lightblue;
+  border-radius: 10px;
+}
+
+.flex-element {
+  width: 150px;
+  height: 150px;
+
+  font-size: 3em;
+  line-height: 150px;
+  color: white;
+  text-align: center;
+
+  border-radius: 10px;
+  background-color: lightgreen;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/**
+  |============================
+  | Flexbox layout
+  |============================
+*/
