@@ -1,10 +1,101 @@
+/* html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+} */
+
 /* reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
 ul,
 ol {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 a {
+  color: currentColor;
   text-decoration: none;
 }
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
 /* reset end */
+body {
+  /* padding: 40px; */
+}
+h1 {
+  background-color: teal;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.text {
+  width: 300px;
+
+  padding: 30px 50px;
+  /* margin-bottom: 150px; */
+
+  /* padding: 10%; */
+  /* padding-left: 100px; */
+
+  /* margin: -20px; */
+  /* margin: auto; */
+  /* margin-left: auto;
+  margin-right: auto; */
+
+  /* margin: 0 auto; */
+  border: 5px solid #ff6c00;
+  /*
+  border-radius: 50%; */
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+ul {
+  margin-bottom: 20px;
+}
+/* li:first-child {
+  background-color: #ff6c00;
+  color: white;
+}
+li:last-child {
+  background-color: lightblue;
+  color: white;
+} */
+li:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+li:last-child,
+li:nth-child(-n + 3) {
+  background-color: lightblue;
+}
+
+/*
+a*n + b
+a - період циклу
+n - лічильник циклу
+b - зміщення
+*/
