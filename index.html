@@ -31,13 +31,6 @@
     <header class="header">
       <div class="header-container container">
         <a class="header-logo" href="">
-          <!-- <img
-            class="header-img"
-            src="./images/header/logo.svg"
-            alt="BarberShop logo"
-            width="76"
-            height="76"
-          /> -->
           <svg class="header-img" width="76" height="76">
             <use href="./images/sprite.svg#logo"></use>
           </svg>
@@ -352,7 +345,7 @@
       <!-- Gallery section -->
       <section class="gallery section">
         <div class="container">
-          <p class="uppertitle">In Latin, "barba" means "beard"</p>
+          <p class="gallery-uppertitle uppertitle">In Latin, "barba" means "beard"</p>
           <h2 class="visually-hidden">BarberShop gallery</h2>
           <ul class="gallery-list list">
             <li class="gallery-item">
@@ -411,15 +404,28 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
+                  <svg class="contacts-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#map-pin"></use>
+                  </svg>
                   st. Vasylkivska, 7A <br />
                   Kiev, 08132
                 </a>
               </li>
               <li class="contacts-item">
-                <a class="contacts-link" href="tel:+380441111111">+38 044 111 11 11</a>
+                <a class="contacts-link" href="tel:+380441111111">
+                  <svg class="contacts-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#phone"></use>
+                  </svg>
+                  +38 044 111 11 11</a
+                >
               </li>
               <li class="contacts-item">
-                <a class="contacts-link" href="mailto:barbershop@email.com">barbershop@email.com</a>
+                <a class="contacts-link" href="mailto:barbershop@email.com">
+                  <svg class="contacts-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#email"></use>
+                  </svg>
+                  barbershop@email.com
+                </a>
               </li>
             </ul>
           </address>
@@ -433,12 +439,12 @@
     </main>
     <!-- Footer section -->
     <footer class="footer">
-      <div class="container">
+      <div class="footer-container container">
         <p class="footer-copyright">&#169; Copyright 2020</p>
         <ul class="media list">
           <li class="media-item">
             <a
-              class="media-link"
+              class="media-link footer-link"
               href="http://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -448,7 +454,7 @@
           </li>
           <li class="media-item">
             <a
-              class="media-link"
+              class="media-link footer-link"
               href="http://youtube.com"
               target="_blank"
               rel="noopener noreferrer"

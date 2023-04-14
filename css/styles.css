@@ -246,10 +246,19 @@ button {
 }
 /* media styles */
 .media {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
-.media-item {
+.media::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
 }
 .media-link {
+  display: block;
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -498,10 +507,23 @@ button {
 }
 /**
   |============================
+  | Gallery
+  |============================
+*/
+.gallery {
+}
+.gallery-uppertitle {
+  margin-bottom: 44px;
+}
+.gallery-list {
+  display: flex;
+  gap: 30px;
+}
+/**
+  |============================
   | Booking styles
   |============================
 */
-
 .wrapper {
   max-width: 1600px;
   margin: 0 auto;
@@ -509,6 +531,7 @@ button {
   display: flex;
   justify-content: center;
   gap: 30px;
+
   background-color: var(--main-bg-cl);
   background-image: url(../images/contacts/bg-img.png);
   background-repeat: no-repeat;
@@ -532,12 +555,17 @@ button {
   font-style: normal;
   color: var(--gray-txt-cl);
 }
-.contacts-list {
-}
+
 .contacts-item:not(:last-child) {
   margin-bottom: 20px;
 }
 .contacts-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.contacts-item:first-child .contacts-link {
+  font-weight: 700;
 }
 .contacts-title {
   font-weight: 600;
@@ -554,7 +582,10 @@ button {
   | Footer styles
   |============================
 */
-.footer {
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .footer-copyright {
   font-weight: 600;
@@ -562,4 +593,8 @@ button {
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: var(--gray-txt-cl);
+}
+.footer-link {
+  padding-top: 52px;
+  padding-bottom: 52px;
 }
