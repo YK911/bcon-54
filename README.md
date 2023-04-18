@@ -2,22 +2,23 @@
 
 План заняття:
 
-- Відносне позиціонування `position: relative`
-- Властивості координат: **top**, **left**, **right**, **bottom**
-- Абсолютне позиціонування `position: absolute`
-- Фіксоване позиціонування `position: fixed`
-- Липке позиціонування `position: sticky`
-- Властивість `z-index`
-- Властивість `overflow`
-
-- Властивості переходів
-- 2D-трансформації з властивістю `transform` та функціями:
-  - `translate()`
-  - `scale()`
-  - `rotate()`
-  - `skew()`
-- Властивості анімації та директива `@keyframes`
-- Перспектива та 3D-трансформації
+- Тег `form`
+- Тег `label`
+- Тег `input`
+- Атрибут `type` тега `input` і його значення
+  - `email`
+  - `password`
+  - `radio`
+  - `checkbox`
+  - `number`,
+  - `tel`
+  - `range`
+  - `date`
+- Атрибути `placeholder`, `checked`, `name`
+- Тег `textarea`
+- Теги `select` та `optgroup`
+- Тег `datalist`
+- Тег `fieldset` і `<div role="group">`
 
 ---
 

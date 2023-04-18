@@ -171,6 +171,8 @@ button {
   z-index: var(--header-idx);
 
   width: 100%;
+
+  transition: background-color var(--anim-fast);
 }
 .header.no-transparency {
   background-color: rgba(17, 19, 25, 0.4);
@@ -183,7 +185,11 @@ button {
   margin-right: 124px;
 }
 .header-img {
-  fill: #303030;
+  fill: var(--main-txt-cl);
+  transition: fill var(--anim-fast);
+}
+.header.no-transparency .header-img {
+  fill: var(--secondary-bg-cl);
 }
 .header-nav {
   margin-right: auto;
@@ -206,19 +212,13 @@ button {
   letter-spacing: 0.1em;
   color: var(--secondary-txt-cl);
 
-  /* normal state */
   transition: color var(--anim-fast);
-  /* transition-property: color, letter-spacing;
-  transition-duration: 300ms;
-  transition-timing-function: ease;
-  transition-delay: 2s; */
 }
 .header-nav-link.current {
   color: var(--accent-txt-cl);
 }
 .header-nav-link:hover,
 .header-nav-link:focus {
-  /* active state */
   color: var(--accent-txt-cl);
 }
 
@@ -258,6 +258,7 @@ button {
   color: var(--accent-txt-cl);
 }
 .header-btn {
+  margin-right: 20px;
 }
 
 /**
