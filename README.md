@@ -8,10 +8,10 @@
 - Атрибут `type` тега `input` і його значення
   - `email`
   - `password`
+  - `tel`
   - `radio`
   - `checkbox`
   - `number`,
-  - `tel`
   - `range`
   - `date`
 - Атрибути `placeholder`, `checked`, `name`

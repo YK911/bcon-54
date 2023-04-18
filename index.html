@@ -555,13 +555,47 @@
     </footer>
 
     <!-- Modal window -->
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
           <svg class="modal-icon" width="26" height="26">
             <use href="./images/sprite.svg#icon-close"></use>
           </svg>
         </button>
+
+        <strong>Leave your contacts and we will call you back</strong>
+        <form class="modal-form" name="contact_form">
+          <div>
+            <label for="">User name</label>
+            <input type="text" />
+            <svg class="" width="20" height="20">
+              <use href=""></use>
+            </svg>
+          </div>
+          <div>
+            <label for="">User phone</label>
+            <input type="tel" />
+            <svg class="" width="20" height="20">
+              <use href=""></use>
+            </svg>
+          </div>
+          <div>
+            <label for="">User email</label>
+            <input type="email" />
+            <svg class="" width="20" height="20">
+              <use href=""></use>
+            </svg>
+          </div>
+          <div>
+            <label for="">Comment</label>
+            <textarea name="" id="" rows="10"></textarea>
+          </div>
+          <label for="">
+            <input type="checkbox" />
+            <span> I accept the terms and conditions of the <a href="">Privacy Policy</a> </span>
+          </label>
+          <button type="submit">Send</button>
+        </form>
       </div>
     </div>
 
@@ -570,5 +604,6 @@
     <script src="./js/animate-on-scroll.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/form.js"></script>
   </body>
 </html>

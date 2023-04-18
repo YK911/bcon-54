@@ -171,11 +171,13 @@ button {
   z-index: var(--header-idx);
 
   width: 100%;
+  padding: 22px 0;
 
   transition: background-color var(--anim-fast);
 }
 .header.no-transparency {
-  background-color: rgba(17, 19, 25, 0.4);
+  background-color: rgba(17, 19, 25, 0.2);
+  backdrop-filter: blur(6px);
 }
 .header-container {
   display: flex;
@@ -185,6 +187,7 @@ button {
   margin-right: 124px;
 }
 .header-img {
+  display: block;
   fill: var(--main-txt-cl);
   transition: fill var(--anim-fast);
 }
