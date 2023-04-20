@@ -24,7 +24,7 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     />
     <!-- AOS animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /> -->
     <!-- Animate.css -->
     <link
       rel="stylesheet"
@@ -65,6 +65,11 @@
           data-modal-open
         >
           Online-booking
+        </button>
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="menu-toggle-icon" width="24" height="16">
+            <use href="./images/sprite.svg#menu"></use>
+          </svg>
         </button>
       </div>
     </header>
@@ -108,7 +113,6 @@
               We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
             </p>
           </div>
-          <!-- Slider controls -->
           <ul class="slider-controls list">
             <li class="slider-controls-item">
               <button class="slider-controls-btn prev" type="button" disabled>Back</button>
@@ -125,7 +129,7 @@
         </div>
       </section>
       <!-- About section -->
-      <section class="about section" id="about">
+      <!-- <section class="about section" id="about">
         <div class="about-container container">
           <ul class="about-list list">
             <li class="about-item">
@@ -162,7 +166,7 @@
             <button class="btn" type="button">Online-booking</button>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Price section -->
       <section class="price section" id="price">
         <div class="container">
@@ -213,7 +217,7 @@
         </div>
       </section>
       <!-- Benefits section -->
-      <section class="benefits section">
+      <!-- <section class="benefits section">
         <div class="benefits-container container">
           <div class="benefits-left-side">
             <ul class="benefits-list list">
@@ -268,9 +272,9 @@
             </p>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Team section -->
-      <section class="team section" id="team">
+      <!-- <section class="team section" id="team">
         <div class="container">
           <p class="uppertitle">For true enjoyers of the atmosphere</p>
           <h2 class="team-title title">Our barbers</h2>
@@ -400,27 +404,53 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Gallery section -->
       <section class="gallery section">
         <div class="container">
           <p class="gallery-uppertitle uppertitle">In Latin, "barba" means "beard"</p>
           <h2 class="visually-hidden">BarberShop gallery</h2>
-          <ul class="gallery-list list">
+          <ul class="gallery-list card-set list">
             <li
-              class="gallery-item"
+              class="gallery-item card-set-item"
               data-aos="fade-right"
               data-aos-duration="600"
               data-aos-delay="300"
               data-aos-once="true"
             >
-              <img
-                class="gallery-img"
-                src="./images/gallery/img-1.jpg"
-                alt="Haircut under the nozzle"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-1_desk@1x.jpg 1x,
+                    ./images/gallery/img-1_desk@2x.jpg 2x
+                  "
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-1_tab@1x.jpg 1x,
+                    ./images/gallery/img-1_tab@2x.jpg 2x
+                  "
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-1_mob@1x.jpg 1x,
+                    ./images/gallery/img-1_mob@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/gallery/img-1_mob@1x.jpg"
+                  alt="Haircut under the nozzle"
+                  width="418"
+                  height="360"
+                />
+              </picture>
               <div class="overlay">
                 <p class="overlay-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, saepe.
@@ -428,60 +458,138 @@
               </div>
             </li>
             <li
-              class="gallery-item"
+              class="gallery-item card-set-item"
               data-aos="fade-right"
               data-aos-duration="600"
               data-aos-delay="600"
               data-aos-once="true"
             >
-              <img
-                class="gallery-img"
-                src="./images/gallery/img-2.jpg"
-                alt="Beard trim"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-2_desk@1x.jpg 1x,
+                    ./images/gallery/img-2_desk@2x.jpg 2x
+                  "
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-2_tab@1x.jpg 1x,
+                    ./images/gallery/img-2_tab@2x.jpg 2x
+                  "
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-2_mob@1x.jpg 1x,
+                    ./images/gallery/img-2_mob@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/gallery/img-2_mob@1x.jpg"
+                  alt="Beard trim"
+                  width="418"
+                  height="360"
+                />
+              </picture>
             </li>
             <li
-              class="gallery-item"
+              class="gallery-item card-set-item"
               data-aos="fade-right"
               data-aos-duration="600"
               data-aos-delay="900"
               data-aos-once="true"
             >
-              <img
-                class="gallery-img"
-                src="./images/gallery/img-3.jpg"
-                alt="Trainee’s haircut"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-3_desk@1x.jpg 1x,
+                    ./images/gallery/img-3_desk@2x.jpg 2x
+                  "
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-3_tab@1x.jpg 1x,
+                    ./images/gallery/img-3_tab@2x.jpg 2x
+                  "
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-3_mob@1x.jpg 1x,
+                    ./images/gallery/img-3_mob@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/gallery/img-3_mob@1x.jpg"
+                  alt="Trainee’s haircut"
+                  width="418"
+                  height="360"
+                />
+              </picture>
             </li>
             <li
-              class="gallery-item"
+              class="gallery-item card-set-item"
               data-aos="fade-right"
               data-aos-duration="600"
               data-aos-delay="1200"
               data-aos-once="true"
             >
-              <img
-                class="gallery-img"
-                src="./images/gallery/img-4.jpg"
-                alt="Straight razor shave"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-4_desk@1x.jpg 1x,
+                    ./images/gallery/img-4_desk@2x.jpg 2x
+                  "
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-4_tab@1x.jpg 1x,
+                    ./images/gallery/img-4_tab@2x.jpg 2x
+                  "
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-4_mob@1x.jpg 1x,
+                    ./images/gallery/img-4_mob@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/gallery/img-4_mob@1x.jpg"
+                  alt="Straight razor shave"
+                  width="418"
+                  height="360"
+                />
+              </picture>
             </li>
           </ul>
         </div>
       </section>
       <div class="wrapper">
         <!-- Booking section -->
-        <section class="booking section">
+        <!-- <section class="booking section">
           <h2 class="title title-light">Online-booking</h2>
-        </section>
+        </section> -->
         <!-- Contacts section -->
-        <section class="contacts section" id="contacts">
+        <!-- <section class="contacts section" id="contacts">
           <h2 class="title title-light">Contacts</h2>
           <address class="contacts-address">
             <ul class="contacts-list list">
@@ -522,11 +630,11 @@
             Every day from <time datetime="09:00">9:00</time> to
             <time datetime="22:00">22:00</time>
           </p>
-        </section>
+        </section> -->
       </div>
     </main>
     <!-- Footer section -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="footer-container container">
         <p class="footer-copyright">&#169; Copyright 2020</p>
         <ul class="media list">
@@ -552,10 +660,10 @@
           </li>
         </ul>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- Modal window -->
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
           <svg class="modal-icon" width="22" height="22">
@@ -621,10 +729,6 @@
           </div>
           <label class="modal-form-agreement">
             <input class="modal-form-checkbox" type="checkbox" name="user_agreement" />
-            <!-- <svg class="modal-form-custom-checkbox" width="16" height="16">
-              <use class="icon-unchecked" href="./images/sprite.svg#icon-unchecked"></use>
-              <use class="icon-checked" href="./images/sprite.svg#icon-checked"></use>
-            </svg> -->
             <span class="modal-form-desc">
               I accept the terms and conditions of the
               <a class="modal-form-link" href="">Privacy Policy</a>
@@ -633,13 +737,92 @@
           <button class="modal-form-btn btn" type="submit">Send</button>
         </form>
       </div>
+    </div> -->
+
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu list">
+        <li>
+          <a class="link" href="">About</a>
+        </li>
+        <li>
+          <a class="link" href="">Products</a>
+        </li>
+        <li>
+          <a class="link" href="">Contacts</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-contacts list">
+        <li>
+          <a href="">+11 (000) 111-11-11</a>
+        </li>
+        <li>
+          <a href="">info@devstudio.com</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-socilas socilas list">
+        <li class="socials-item">
+          <a class="socials-link" href="" target="_blank" rel="noopener noreferrer">
+            <svg class="socials-icon" width="20" height="20">
+              <use href="./images/sprite.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a class="socials-link" href="" target="_blank" rel="noopener noreferrer">
+            <svg class="socials-icon" width="20" height="20">
+              <use href="./images/sprite.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a class="socials-link" href="" target="_blank" rel="noopener noreferrer">
+            <svg class="socials-icon" width="20" height="20">
+              <use href="./images/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a class="socials-link" href="" target="_blank" rel="noopener noreferrer">
+            <svg class="socials-icon" width="20" height="20">
+              <use href="./images/sprite.svg#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </div>
 
     <!-- AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
     <script src="./js/animate-on-scroll.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/form.js"></script>
+    <!-- Mobile menu -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
