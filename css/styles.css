@@ -985,7 +985,7 @@ button {
   | Footer styles
   |============================
 */
-.footer-container {
+/* .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1000,7 +1000,7 @@ button {
 .footer-link {
   padding-top: 52px;
   padding-bottom: 52px;
-}
+} */
 /**
   |============================
   | Modal window
@@ -1012,6 +1012,9 @@ button {
   left: 0;
   z-index: var(--modal-idx);
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
 
@@ -1025,14 +1028,14 @@ button {
   visibility: hidden;
   pointer-events: none;
 
-  transition-delay: 400ms;
+  transition-delay: 2000ms;
 }
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%) scale(1);
-  opacity: 1;
+  position: relative;
+  /*  top: 50%;
+  left: 50%; */
+  /* transform: translateX(-50%) translateY(-50%) scale(1); */
+  /* opacity: 1; */
 
   width: 480px;
   min-height: 500px;
@@ -1042,12 +1045,16 @@ button {
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
-  transition: transform 400ms cubic-bezier(0.35, 1.2, 1, 1.3) 400ms,
-    opacity 400ms cubic-bezier(0.35, 1.2, 1, 1.3) 400ms;
+  /* transition: transform 400ms cubic-bezier(0.35, 1.2, 1, 1.3) 400ms,
+    opacity 400ms cubic-bezier(0.35, 1.2, 1, 1.3) 400ms; */
+
+  --animate-duration: 2s;
+  /* animation: bounceIn;
+  animation-duration: 2s; */
 }
 .backdrop.is-hidden .modal {
-  transform: translateX(-50%) translateY(-50%) scale(0.3);
-  opacity: 0;
+  /* transform: translateX(-50%) translateY(-50%) scale(0.3); */
+  /* opacity: 0; */
 }
 .modal-btn {
   position: absolute;
@@ -1276,4 +1283,161 @@ button {
 }
 .mobile-socilas {
   justify-content: flex-start;
+}
+/**
+  |============================
+  | Footer
+  |============================
+*/
+.footer {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  background: #2e2f42;
+}
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 72px 24px;
+
+  max-width: 428px;
+  padding: 0 16px;
+}
+@media only screen and (max-width: 767px) {
+  .footer-container {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer-container {
+    max-width: 768px;
+    padding: 0 15px;
+    justify-content: flex-start;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-container {
+    padding: 0 108px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .footer-container {
+    max-width: 1158px;
+    gap: unset;
+  }
+}
+.left {
+  max-width: 268px;
+}
+@media only screen and (min-width: 1200px) {
+  .left {
+    margin-right: 120px;
+  }
+}
+.footer-logo {
+  display: block;
+  margin-bottom: 16px;
+
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #f4f4fd;
+}
+.footer-logo-accent {
+  color: #4d5ae5;
+}
+.footer-desc {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  text-align: left;
+}
+.middle {
+}
+.footer-title {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+.footer-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.footer-socials-item {
+}
+.footer-socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  background: #4d5ae5;
+
+  fill: #f4f4fd;
+}
+
+.right {
+  max-width: 453px;
+  width: 100%;
+}
+@media only screen and (min-width: 1200px) {
+  .right {
+    margin-left: auto;
+  }
+}
+.footer-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  justify-content: center;
+}
+.footer-form-field {
+  max-width: 398px;
+  width: 100%;
+  height: 40px;
+
+  color: #ffffff;
+  opacity: 0.3;
+  background-color: transparent;
+  outline: transparent;
+  border: 1px solid #ffffff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+@media only screen and (min-width: 768px) {
+  .footer-form-field {
+    max-width: 264px;
+  }
+}
+.footer-form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 165px;
+  height: 40px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+
+  background: #4d5ae5;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
 }
